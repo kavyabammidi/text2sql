@@ -1,48 +1,110 @@
-# Text2SQL Project
-This project converts natural language text into SQL queries. It is designed to help users interact with databases using plain English, making database querying more accessible to non-technical users.
+# 📝 Text2SQL: AI-powered SQL Query Generator & Retriever
+
+## 📌 Overview
+Text2SQL is an AI-powered application that converts natural language queries into SQL statements and retrieves relevant data from a database. It leverages **Google Gemini AI** for query generation and **SQLite** for database storage.
+
 ---
-## Features
-- Converts natural language text into SQL queries.
-- Supports basic SQL operations (e.g., `SELECT`, `INSERT`, `UPDATE`, `DELETE`).
-- Easy-to-use interface (command-line or web-based, depending on your implementation).
+
+## 🚀 Features
+- Convert **English questions** into **SQL queries**.
+- Retrieve data from **SQLite** database.
+- Uses **Google Gemini AI** for query generation.
+- User-friendly **Streamlit** web interface.
+
 ---
-## Setup
 
-### Prerequisites
+## 🛠️ Tech Stack
+- **Frontend:** Streamlit
+- **Backend:** Python, Google Gemini AI
+- **Database:** SQLite
+- **Deployment:** Heroku / Hugging Face Spaces
 
-- Python 3.8 or higher
-- Pip (Python package manager)
+---
 
-### Installation
+## 📂 Project Structure
+```
+📦 TEXT2SQL
+├── 📄 app.py            # Main application file
+├── 📄 sql.py            # SQLite database setup
+├── 📄 requirements.txt  # Dependencies
+├── 📄 .env              # Environment variables (API Key)
+└── 📄 README.md         # Project documentation
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/text2sql.git
-   cd text2sql
-2.Create a virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-3.Insatll dependencies 
-    pip install -r requirements.txt
-4.Set up environment variables:
-    Rename .env.example to .env.
-    Update the .env file with your database credentials or API keys (if applicable).
+---
 
-Usage
-Running the Application
-1.Start the application:
-  python app.py
+## 🔧 Setup & Installation
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/Text2SQL.git
+cd Text2SQL
+```
 
-file structure
-  text2sql/
-├── app.py                # Main application file
-├── sql.py                # SQL query generation logic
-├── requirements.txt      # List of dependencies
-├── README.md             # Project documentation
-├── .env.example          # Template for environment variables
-└── .gitignore            # Specifies files to ignore in Git
+### **2️⃣ Create a Virtual Environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # For Mac/Linux
+venv\Scripts\activate     # For Windows
+```
 
-Acknowledgments
--->Inspired by the need to make SQL more accessible to non-technical users.
--->Built with the help of Python and open-source libraries.
+### **3️⃣ Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### **4️⃣ Set Up Environment Variables**
+Create a `.env` file and add your Google Gemini API key:
+```
+GOOGLE_API_KEY=your_google_gemini_api_key
+```
+
+### **5️⃣ Run the Application**
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🖥️ Usage
+1. Enter an **English question** (e.g., "List all students in Data Science class").
+2. The **AI** generates an **SQL query**.
+3. The **SQL query executes** and displays the **retrieved data**.
+
+---
+
+## 🌍 Deployment
+### **Deploy to Heroku**
+```bash
+git init
+git add .
+git commit -m "Deploying Text2SQL"
+heroku create text2sql-app
+git push heroku main
+heroku open
+```
+
+### **Deploy to Hugging Face Spaces**
+1. Create a **new space** on [Hugging Face Spaces](https://huggingface.co/spaces).
+2. Upload **app.py**, `requirements.txt`, and `.env`.
+3. Commit changes and **Deploy**.
+
+---
+
+## 📜 License
+This project is **open-source** and available under the **MIT License**.
+
+---
+
+## 🙌 Acknowledgments
+- **Google Gemini AI** for query generation.
+- **Streamlit** for the interactive UI.
+- **SQLite** for lightweight database management.
+
+---
+
+### 🎯 Future Enhancements
+- Support for **MySQL & PostgreSQL**.
+- Implement **user authentication**.
+- Improve **query optimization**.
+
+💡 Feel free to contribute or suggest new features!
